@@ -1,12 +1,10 @@
 package Model;
 
 public class Account {
-    private static int id;
     private boolean state;
     private int bonus;
 
     public void deleteAccount() {
-
     }
 
     public int getBonus() {
@@ -17,7 +15,7 @@ public class Account {
         this.bonus = bonus;
     }
 
-    public boolean isState() {
+    public boolean getState() {
         return state;
     }
 
@@ -25,11 +23,6 @@ public class Account {
         this.state = state;
     }
 
-    public static int getId() {
-        return id;
-    }
-
-    public Account(boolean state) {
-        this.state = state;
+    public Account() {
     }
 }

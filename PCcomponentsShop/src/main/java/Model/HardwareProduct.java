@@ -7,10 +7,6 @@ abstract public class HardwareProduct {
     protected double price;
     protected int rating;
 
-    public void addProduct() {
-
-    }
-
     public int getId() {
         return id;
     }
@@ -27,11 +23,7 @@ abstract public class HardwareProduct {
 
     }
 
-    public void customize() {
-
-    }
-
-    public HardwareProduct() {
+    public void customizeSpecifications() {
 
     }
 

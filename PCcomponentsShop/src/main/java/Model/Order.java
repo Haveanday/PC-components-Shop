@@ -1,7 +1,8 @@
 package Model;
 
 public class Order {
-    private static int id;
+    private static int counter;
+    private int id;
     private boolean state;
 
     public void  confirmOrder() {
@@ -16,20 +17,18 @@ public class Order {
 
     }
 
-    public Order(boolean state) {
-        this.state = state;
+    public Order() {
+
     }
 
-    public boolean isState() {
+    public boolean getState() {
         return state;
     }
 
     public void setState(boolean state) {
-        this.state = state;
     }
 
-    public static int getId() {
+    public int getId() {
         return id;
     }
-
 }

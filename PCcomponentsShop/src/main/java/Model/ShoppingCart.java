@@ -2,21 +2,16 @@ package Model;
 
 public class ShoppingCart {
     private boolean state;
-    private static int counter;
+    private int OrderCounter;
 
     public void clearShoppingCart() {
-
     }
 
-    public static int getCounter() {
-        return counter;
+    public int getCounter() {
+        return OrderCounter;
     }
 
-    public static void setCounter(int counter) {
-        ShoppingCart.counter = counter;
-    }
-
-    public boolean isState() {
+    public boolean getState() {
         return state;
     }
 
@@ -24,7 +19,6 @@ public class ShoppingCart {
         this.state = state;
     }
 
-    public ShoppingCart(boolean state) {
-        this.state = state;
+    public ShoppingCart() {
     }
 }
