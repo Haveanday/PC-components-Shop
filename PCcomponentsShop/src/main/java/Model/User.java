@@ -1,14 +1,13 @@
 package Model;
 
 public class User {
-   private static int counter;
-   private int id;
-   private boolean isRegistered;
    private String login;
    private String password;
    private String firstName;
    private String secondName;
    private String phoneNumber;
+   private String email;
+   private IsRegistered isRegistered;
 
     public String getSecondName() {
         return secondName;
@@ -42,14 +41,6 @@ public class User {
         this.login = login;
     }
 
-    public boolean isRegistered() {
-        return isRegistered;
-    }
-
-    public void setRegistered(boolean registered) {
-        isRegistered = registered;
-    }
-
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -58,8 +49,20 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getId() {
-        return id;
+    public IsRegistered getIsRegistered() {
+        return isRegistered;
+    }
+
+    public void setIsRegistered(IsRegistered isRegistered) {
+        this.isRegistered = isRegistered;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public User() {

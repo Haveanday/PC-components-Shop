@@ -1,12 +1,18 @@
 package Model;
 
 public class Order {
-    private static int counter;
-    private int id;
-    private boolean state;
+    private OrderState orderStater;
 
     public void  confirmOrder() {
 
+    }
+
+    public OrderState getOrderStater() {
+        return orderStater;
+    }
+
+    public void setOrderStater(OrderState orderStater) {
+        this.orderStater = orderStater;
     }
 
     public void cancelOrder() {
@@ -21,14 +27,4 @@ public class Order {
 
     }
 
-    public boolean getState() {
-        return state;
-    }
-
-    public void setState(boolean state) {
-    }
-
-    public int getId() {
-        return id;
-    }
 }
