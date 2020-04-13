@@ -1,0 +1,29 @@
+2020-04-13 11:12:05,876 INFO o.s.b.StartupInfoLogger [main] Starting Application on DESKTOP-OQKR63I with PID 51964 (C:\Users\Kiralisan\IdeaProjects\PCcomponentsShop\target\classes started by Kiralisan in C:\Users\Kiralisan\IdeaProjects\PCcomponentsShop)
+2020-04-13 11:12:05,892 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-04-13 11:12:07,550 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-04-13 11:12:07,568 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-04-13 11:12:07,573 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-04-13 11:12:07,574 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-04-13 11:12:07,675 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-04-13 11:12:07,676 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1684 ms
+2020-04-13 11:12:08,306 INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-13 11:12:08,404 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-13 11:12:08,544 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-04-13 11:12:08,562 INFO s.d.s.w.p.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-04-13 11:12:08,588 INFO s.d.s.w.p.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-04-13 11:12:08,618 INFO s.d.s.w.s.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-13 11:12:08,849 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-04-13 11:12:08,883 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-13 11:12:08,888 INFO o.s.b.StartupInfoLogger [main] Started Application in 3.727 seconds (JVM running for 4.525)
+2020-04-13 11:12:16,098 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-13 11:12:16,099 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-04-13 11:12:16,107 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 8 ms
+2020-04-13 11:12:16,135 ERROR E.EntityNotFoundException [http-nio-8080-exec-2] Entity not found.
+2020-04-13 11:12:21,604 ERROR E.EntityNotFoundException [http-nio-8080-exec-3] Entity not found.
+2020-04-13 11:12:26,158 INFO c.e.P.Controller [http-nio-8080-exec-4] The item was added.
+2020-04-13 11:12:30,013 INFO c.e.P.SaleSchedule [task-1] Sales started.
+2020-04-13 11:12:44,065 INFO c.e.P.Controller [http-nio-8080-exec-6] The item was successfully deleted.
+2020-04-13 11:12:54,626 INFO c.e.P.Controller [http-nio-8080-exec-8] The item was successfully deleted.
+2020-04-13 11:12:58,596 ERROR E.EntityNotFoundException [http-nio-8080-exec-9] Entity not found.
+2020-04-13 11:13:00,005 INFO c.e.P.SaleSchedule [task-2] Sales started.
+2020-04-13 11:13:13,464 ERROR E.EntityAlreadyExistsException [http-nio-8080-exec-10] This entity already exists.

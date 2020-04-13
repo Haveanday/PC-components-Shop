@@ -30,15 +30,25 @@ public class GraphicsCard extends HardwareProduct {
     }
 
     public GraphicsCard() {
-        objectCounter++;
-        id = objectCounter;
+    }
+
+    public GraphicsCard(String name,
+                        double price,
+                        int coreClock,
+                        int memorySize,
+                        String cardInterface) {
+        this.name = name;
+        this.price = price;
+        this.coreClock = coreClock;
+        this.memorySize = memorySize;
+        this.cardInterface = cardInterface;
     }
 
     @Override
-    public void showInfo() {
-        this.getName();
-        this.getId();
-        System.out.println(name);
-        System.out.println(id);
+    public String toString() {
+        return "Graphics Card\n" + "Name: " + name + "\nPrice: " + price +
+                "\nCore clock:" + coreClock +
+                "\nMemory size: " + memorySize +
+                "\nInterface: " + cardInterface;
     }
 }

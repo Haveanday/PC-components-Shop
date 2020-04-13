@@ -1,22 +1,15 @@
 package Model;
 
 abstract public class HardwareProduct {
-    protected static int objectCounter = 0;
-    protected int id;
     protected String name;
     protected double price;
-    protected int rating;
+    private Rating rating;
 
-    public int getId() {
-        return id;
-    }
-
-    public void buy() {
-
+    public Rating getRating() {
+        return rating;
     }
 
     public void addToShoppingCart() {
-
     }
 
     public void showInfo() {
@@ -25,10 +18,6 @@ abstract public class HardwareProduct {
 
     public void customizeSpecifications() {
 
-    }
-
-    public int getRating() {
-        return rating;
     }
 
     public double getPrice() {

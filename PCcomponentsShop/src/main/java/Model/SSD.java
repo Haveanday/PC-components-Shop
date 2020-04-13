@@ -49,4 +49,31 @@ public class SSD extends HardwareProduct {
     public void setSSDInterface(String SSDInterface) {
         this.SSDInterface = SSDInterface;
     }
+
+    public SSD(String name,
+               double price,
+               String SSDInterface,
+               int capacity,
+               String maxSequentialRead,
+               String maxSequentialWrite,
+               String formFactor) {
+        this.name = name;
+        this.price = price;
+        this.SSDInterface = SSDInterface;
+        this.capacity = capacity;
+        this.maxSequentialRead = maxSequentialRead;
+        this.maxSequentialWrite = maxSequentialWrite;
+        this.formFactor = formFactor;
+    }
+
+    @Override
+    public String toString() {
+        return "SSD\n" + "Name:" + name + "\nPrice:" + price +
+                "\nInterface:" + SSDInterface + '\'' +
+                "\nCapacity:" + capacity +
+                "\nMax Sequential Read:" + maxSequentialRead + '\'' +
+                "\nMax Sequential Write:" + maxSequentialWrite + '\'' +
+                "\nForm Factor:" + formFactor + '\'' +
+                '}';
+    }
 }
