@@ -3,5 +3,6 @@ package Model;
 public enum Rating {
     HIGH,
     AVERAGE,
-    LOW
+    LOW,
+    NO_RATING
 }

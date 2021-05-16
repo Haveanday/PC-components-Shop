@@ -7,6 +7,7 @@ import Model.SSD;
 import java.util.HashMap;
 
 public class ComponentsRepository {
+    Integer id;
     public static HashMap<Integer, CPU> cpuHashMap = new HashMap<Integer, CPU>();
     public static HashMap<Integer, GraphicsCard> graphicsCardHashMap = new HashMap<Integer, GraphicsCard>();
     public static HashMap<Integer, SSD> ssdHashMap = new HashMap<Integer, SSD>();
@@ -36,8 +37,9 @@ public class ComponentsRepository {
         cpuHashMap.put(id, item);
     }
 
-    public void addGraphicsCardItem(Integer id, GraphicsCard item) {
+    public HashMap<Integer, GraphicsCard> addGraphicsCardItem(Integer id, GraphicsCard item) {
         graphicsCardHashMap.put(id, item);
+        return graphicsCardHashMap;
     }
 
     public void addSSDItem(Integer id, SSD item) {
@@ -50,8 +52,9 @@ public class ComponentsRepository {
         cpuHashMap.remove(id);
     }
 
-    public void deleteGraphicsCardItem(Integer id) {
+    public HashMap<Integer, GraphicsCard> deleteGraphicsCardItem(Integer id) {
         graphicsCardHashMap.remove(id);
+        return graphicsCardHashMap;
     }
 
     public void deleteSSDItem(Integer id) {
@@ -64,8 +67,9 @@ public class ComponentsRepository {
         cpuHashMap.put(id, item);
     }
 
-    public void replaceGraphicsCardItem(Integer id, GraphicsCard item) {
+    public HashMap<Integer, GraphicsCard> replaceGraphicsCardItem(Integer id, GraphicsCard item) {
         graphicsCardHashMap.put(id, item);
+        return graphicsCardHashMap;
     }
 
     public void replaceSSDItem(Integer id, SSD item) {

@@ -36,12 +36,14 @@ public class GraphicsCard extends HardwareProduct {
                         double price,
                         int coreClock,
                         int memorySize,
-                        String cardInterface) {
+                        String cardInterface,
+                        Rating rating) {
         this.name = name;
         this.price = price;
         this.coreClock = coreClock;
         this.memorySize = memorySize;
         this.cardInterface = cardInterface;
+        this.setRating(rating);
     }
 
     @Override
@@ -49,6 +51,7 @@ public class GraphicsCard extends HardwareProduct {
         return "Graphics Card\n" + "Name: " + name + "\nPrice: " + price +
                 "\nCore clock:" + coreClock +
                 "\nMemory size: " + memorySize +
-                "\nInterface: " + cardInterface;
+                "\nInterface: " + cardInterface +
+                "\nRATING: " + getRating();
     }
 }

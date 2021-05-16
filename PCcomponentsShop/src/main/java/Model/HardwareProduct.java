@@ -9,6 +9,10 @@ abstract public class HardwareProduct {
         return rating;
     }
 
+    public void setRating(Rating rating) {
+        this.rating = rating;
+    }
+
     public void addToShoppingCart() {
     }
 
@@ -35,5 +39,4 @@ abstract public class HardwareProduct {
     public void setName(String name) {
         this.name = name;
     }
-
 }

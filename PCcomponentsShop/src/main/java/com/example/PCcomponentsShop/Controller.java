@@ -79,19 +79,22 @@ public class Controller {
             throw new EntityAlreadyExistsException();
         }
 
-    @PostMapping("/graphics-cards/add/{id}/{name}/{price}/{coreClock}/{memorySize}/{cardInterface}")
+    @PostMapping("/graphics-cards/add/{id}/{name}/{price}/{coreClock}/{memorySize}/{cardInterface}/{rating}")
     public synchronized ResponseEntity<Object> addGraphicsCard(@PathVariable Integer id,
                                                   @PathVariable String name,
                                                   @PathVariable double price,
                                                   @PathVariable int coreClock,
                                                   @PathVariable int memorySize,
-                                                  @PathVariable String cardInterface) throws EntityAlreadyExistsException {
+                                                  @PathVariable String cardInterface,
+                                                  @PathVariable Rating rating) throws EntityAlreadyExistsException {
         if(!componentsRepository.containsGraphicsCardItem(id)) {
                 GraphicsCard graphicsCardItem = new GraphicsCard(name,
                         price,
                         coreClock,
                         memorySize,
-                        cardInterface);
+                        cardInterface,
+                        rating
+                        );
                 componentsRepository.addGraphicsCardItem(id, graphicsCardItem);
             logger.info("The item was added.");
             return new ResponseEntity<>("The item was added.", HttpStatus.OK);
@@ -148,19 +151,21 @@ public class Controller {
         throw new EntityNotFoundException();
     }
 
-    @PutMapping("/graphics-cards/update/{id}/{name}/{price}/{coreClock}/{memorySize}/{cardInterface}")
+    @PutMapping("/graphics-cards/update/{id}/{name}/{price}/{coreClock}/{memorySize}/{cardInterface}/{rating}")
     public synchronized ResponseEntity<Object> updateGraphicsCardsList(@PathVariable Integer id,
                                                           @PathVariable String name,
                                                           @PathVariable double price,
                                                           @PathVariable int coreClock,
                                                           @PathVariable int memorySize,
-                                                          @PathVariable String cardInterface) {
+                                                          @PathVariable String cardInterface,
+                                                          @PathVariable Rating rating) {
         if(componentsRepository.containsGraphicsCardItem(id)) {
             componentsRepository.replaceGraphicsCardItem(id, new GraphicsCard(name,
                     price,
                     coreClock,
                     memorySize,
-                    cardInterface));
+                    cardInterface,
+                    rating));
             logger.info("The item was updated.");
             return new ResponseEntity<>("The item was updated.", HttpStatus.OK);
         }
@@ -220,4 +225,5 @@ public class Controller {
         }
             throw new EntityNotFoundException();
     }
+
 }
