@@ -56,29 +56,37 @@ public class CPU extends HardwareProduct {
         this.coreName = coreName;
     }
 
+
+
     public CPU() {
-        objectCounter++;
-        id = objectCounter;
     }
 
-    @Override
-    public void buy() {
-        System.out.println("buying CPU...");
-    }
-
-    @Override
-    public void showInfo() {
-        this.getName();
-        this.getId();
-        System.out.print("name:");
-        System.out.println(name.toString());
-        System.out.print("id:");
-        System.out.println(id);
+    public CPU(String name,
+               double price,
+               String coreName,
+               String socketType,
+               int coreNumber,
+               int threadsNumber,
+               double frequency,
+               int releaseDate) {
+        this.coreName = coreName;
+        this.name = name;
+        this.price = price;
+        this.socketType = socketType;
+        this.coreNumber = coreNumber;
+        this.threadsNumber = threadsNumber;
+        this.frequency = frequency;
+        this.releaseDate = releaseDate;
     }
 
     @Override
     public String toString() {
-        return "CPU" + '\n' +
-                "name: " + name + '\n' + " id: " + id + '\n';
+        return "CPU\n" + "Name: " + name + "\nPrice: " + price +
+                "\nCore name:" + coreName +
+                "\nSocket type: " + socketType +
+                "\nCore number: " + coreNumber +
+                "\nThreads number: " + threadsNumber +
+                "\nFrequency: " + frequency +
+                "\nRelease date: " + releaseDate;
     }
 }
